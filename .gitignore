@@ -5,8 +5,14 @@ __pycache__/
 *.so
 .Python
 
-# Generated output files
-output/
+# Generated output files - exclude large files only
+output/PathDump/
+output/test/
+output/vis/
+output/MarbleRun.scad
+output/fast_MarbleRun.stl
+output/Screw.scad
+output/fast_Screw.stl
 
 # IDE
 .vscode/
