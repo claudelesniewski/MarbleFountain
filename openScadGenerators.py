@@ -63,7 +63,7 @@ def generateScrewSupports(inputPath, railSphere):
 	idx = 0
 	joinPoints = []
 	while True:
-		groupSize = int(np.random.rand()*np.diff(SCREW_SUPPORT_GROUPING) + SCREW_SUPPORT_GROUPING[0])
+		groupSize = int(np.random.rand()*np.diff(SCREW_SUPPORT_GROUPING)[0] + SCREW_SUPPORT_GROUPING[0])
 		points = inputPath[:, idx:idx+groupSize]
 		if points.shape[1] == 0:
 			break
