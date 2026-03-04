@@ -32,19 +32,18 @@ RANDOM_CNT = 6  # How many random points to generate if LESS_RANDOM_INIT_PATH
 # # SIZE_Y = 185
 # # SIZE_Z = 270
 
-SIZE_X = 350 - 20
-SIZE_Y = 200 - 25
-SIZE_Z = 353.28 - 50
-PT_DROP = 0.55    # target z drop per pt
-PATH_COUNT = 4 # Number of paths to generate
-SCREW_RAD = 18 # Center of rotation to center of marble on track
-SCREW_PITCH = 24 # mm per rev
-LIFT_SUPPORT_PTS = 51
+SIZE_X = 60
+SIZE_Y = 60
+SIZE_Z = 50
+PT_DROP = 2.0     # target z drop per pt
+PATH_COUNT = 2 # Number of paths to generate
+SCREW_RAD = 12 # Center of rotation to center of marble on track
+SCREW_PITCH = 40 # mm per rev
+LIFT_SUPPORT_PTS = 21
 MIRROR_PATHS = False
-RANDOM_CNT = 15  # How many random points to generate if LESS_RANDOM_INIT_PATH
+RANDOM_CNT = 6  # How many random points to generate if LESS_RANDOM_INIT_PATH
 
 WORKING_DIR = 'output/'
-PT_DROP = 0.85    # target z drop per pt
 
 # PT_DROP = 0.8    # target z drop per pt
 # PATH_COUNT = 5
@@ -206,8 +205,8 @@ LIFT_SUPPORT_SUBDIV = 10
 UNIVERSAL_FN = 6
 HIGHER_RES_FN = 10
 
-UNIVERSAL_FN = 18
-HIGHER_RES_FN = 50
+UNIVERSAL_FN = 6
+HIGHER_RES_FN = 10
 
 # Screw lift
 SCREW_RESOLUTION = 30 # pts per rev

@@ -11,6 +11,7 @@ output/test/
 output/vis/
 output/MarbleRun.scad
 output/fast_MarbleRun.stl
+!output/fast_MarbleRun.stl.gz
 output/Screw.scad
 output/fast_Screw.stl
 
