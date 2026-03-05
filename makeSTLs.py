@@ -3,6 +3,7 @@ import subprocess as sp
 from subprocess import call
 from stl import mesh
 import time
+import warnings
 
 from defs import *
 
@@ -34,14 +35,16 @@ for f in files:
     if f.find(".stl") >= 0:
         # Load the STL file
         stl_mesh = mesh.Mesh.from_file(f"{WORKING_DIR}/{f}")
-        
+
         # Get all vertices
-        vertices = stl_mesh.vectors.reshape([-1, 3])
-        
-        # Calculate min and max for each dimension
-        min_x, min_y, min_z = np.min(vertices, axis=0)
-        max_x, max_y, max_z = np.max(vertices, axis=0)
-        
+        with warnings.catch_warnings():
+            warnings.filterwarnings('ignore', category=RuntimeWarning)
+            vertices = stl_mesh.vectors.reshape([-1, 3])
+
+            # Calculate min and max for each dimension
+            min_x, min_y, min_z = np.min(vertices, axis=0)
+            max_x, max_y, max_z = np.max(vertices, axis=0)
+
         print(f"\n{f}")
         print(f"   x:{min_x}:{max_x} ({max_x - min_x})")
         print(f"   y:{min_y}:{max_y} ({max_y - min_y})")
