@@ -69,7 +69,7 @@ if len(sys.argv) > 1 and sys.argv[1] != '-reset':
 BASE_OF_MODEL = -12 # Offset from 0 in Z to print main body off of
 BASE_THICKNESS = 6 # Offset from 0 in Z to print main body off of
 
-PT_SPACING = 6 # distance from one point to the next
+PT_SPACING = 3 # distance from one point to the next
 
 INITIAL_POINT_MULT_SLOPE = 5.0*PT_DROP
 POINT_COUNT = int(np.floor(SIZE_Z / PT_DROP)) # Total number of path points
